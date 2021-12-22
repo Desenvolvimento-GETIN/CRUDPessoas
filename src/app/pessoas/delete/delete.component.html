@@ -1,0 +1,12 @@
+<h2>Você deseja remover o cadastro desta pessoa?</h2>
+
+<div *ngIf="pessoa">
+    <label>Id: <strong>{{pessoa.id}}</strong></label>
+    <br><br>
+    <label>Nome: <strong>{{pessoa.first_name}}</strong></label>
+    <br><br>
+    <label>Sobrenome: <strong>{{pessoa.last_name}}</strong></label>
+    <br><br>
+    <button (click)="delete()">Confirmar</button>
+    <button (click)="cancel()">Cancelar</button>
+</div>

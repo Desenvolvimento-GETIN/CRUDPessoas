@@ -1,0 +1,19 @@
+<h1>Pessoas</h1>
+
+<table *ngIf="responsePessoas">
+    <thead>
+        <td>Nome</td>
+        <td>Sobrenome</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pessoa of responsePessoas.data">
+            <td>{{pessoa.first_name}}</td>
+            <td>{{pessoa.last_name}}</td>
+            <td>
+                <a routerLink = "/pessoas/update/{{pessoa.id}}">EDITAR</a> |
+                <a routerLink = "/pessoas/delete/{{pessoa.id}}">REMOVER</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
